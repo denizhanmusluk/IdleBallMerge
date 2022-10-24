@@ -86,8 +86,32 @@ public class BallCreator : Observer
     }
     public override void OnNotify(NotificationType notificationType)
     {
-        Globals.spawnActive = true;
-        StartCoroutine(Ballcreation());
+
+        switch (notificationType)
+        {
+            case NotificationType.Start:
+                {
+                    Globals.spawnActive = true;
+                    StartCoroutine(Ballcreation());
+                }
+                break;
+            case NotificationType.End:
+                {
+
+                }
+                break;
+            case NotificationType.Win:
+                {
+               
+                }
+                break;
+            case NotificationType.Fail:
+                {
+                  
+                }
+                break;
+
+        }
     }
 
     public Tween DoGetValueScale(Transform tr, bool active, float value, float lastValue, float duration, DG.Tweening.Ease type)

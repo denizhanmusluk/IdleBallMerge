@@ -14,7 +14,7 @@ public class Ball : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform.GetComponent<FixedJoint2D>() != null && GetComponent<Rigidbody2D>().velocity.magnitude > 1)
+        if(collision.transform.GetComponent<HingeJoint2D>() != null && GetComponent<Rigidbody2D>().velocity.magnitude > 1)
         {
 
             collision.transform.GetComponent<Rigidbody2D>().AddForce(new Vector3(0, -1, 0) * 100);

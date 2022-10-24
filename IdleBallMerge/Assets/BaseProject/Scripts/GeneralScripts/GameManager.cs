@@ -98,6 +98,11 @@ public class GameManager : Observer
         {
             ObserverManager.Instance.RemoveObserver(this);//observer register
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            MoneyUpdate(1000);
+        }
     }
 
     //private void Update()
