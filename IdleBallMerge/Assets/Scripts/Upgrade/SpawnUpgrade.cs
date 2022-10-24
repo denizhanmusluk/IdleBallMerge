@@ -4,14 +4,17 @@ using UnityEngine;
 using TMPro;
 public class SpawnUpgrade : MonoBehaviour
 {
-    [SerializeField] public TextMeshProUGUI levelText;
+    [SerializeField] public TextMeshProUGUI levelText1, levelText2;
     [SerializeField] public TextMeshProUGUI costText;
     public void TextInit(int level, int cost)
     {
-        float ballNum = Mathf.Pow(2, (level + 2));
+        float ballNum = Mathf.Pow(2, (level + 1));
 
 
-        levelText.text = ((int)ballNum).ToString();
+        levelText1.text = ((int)ballNum).ToString();
+
+
+        levelText2.text = "Lv. " + (level + 1).ToString();
 
         //costText.text = "$" + cost.ToString();
 
@@ -32,12 +35,14 @@ public class SpawnUpgrade : MonoBehaviour
     }
     public void TextInitFull()
     {
-        levelText.text = "Full";
+        levelText1.text = "Full";
+        levelText2.text = "";
         costText.text = "";
     }
     public void TextInitNull()
     {
-        levelText.text = "";
+        levelText1.text = "";
+        levelText2.text = "";
         costText.text = "";
     }
 }

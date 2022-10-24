@@ -847,7 +847,7 @@ FixedJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 2.3205219e-11, y: 0.0003073624}
   m_DampingRatio: 0
-  m_Frequency: 0
+  m_Frequency: 0.1
 --- !u!70 &4687741076479700198
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2138,7 +2138,7 @@ FixedJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 1.3435238e-11, y: 0.0003073624}
   m_DampingRatio: 0
-  m_Frequency: 0
+  m_Frequency: 0.1
 --- !u!70 &2894446309921171690
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -641,6 +641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4979357947721778705}
+  - component: {fileID: 2744131923287147476}
   m_Layer: 0
   m_Name: Armature
   m_TagString: Untagged
@@ -664,6 +665,27 @@ Transform:
   m_Father: {fileID: 5110199110142961785}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &2744131923287147476
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2460358374092923106}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3082395247831920153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +1331,7 @@ GameObject:
   - component: {fileID: 5558890929606207120}
   - component: {fileID: 5518246410460533576}
   - component: {fileID: 8249723355632020055}
+  - component: {fileID: 4703505822653019196}
   m_Layer: 0
   m_Name: Bone
   m_TagString: Untagged
@@ -1340,13 +1363,13 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4389488967248675053}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 1
+  m_LinearDrag: 4
+  m_AngularDrag: 4
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -1369,6 +1392,24 @@ CapsuleCollider2D:
   m_Offset: {x: -0.002627729, y: 0.005340552}
   m_Size: {x: 0.009457877, y: 0.014588567}
   m_Direction: 0
+--- !u!255 &4703505822653019196
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4389488967248675053}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 498737443033326740}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0.0000000054796283, y: -0.08103544}
+  m_DampingRatio: 0
+  m_Frequency: 0
 --- !u!1 &4689133304485165910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,6 +2809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4233155466624129002}
+  - component: {fileID: 498737443033326740}
   m_Layer: 0
   m_Name: Armature
   m_TagString: Untagged
@@ -2791,6 +2833,27 @@ Transform:
   m_Father: {fileID: 5395448770165780482}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &498737443033326740
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8392034749940157704}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8435671516040851018
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,6 +2988,7 @@ GameObject:
   - component: {fileID: 147714006629125701}
   - component: {fileID: 3762253641121807329}
   - component: {fileID: 4457567285996801164}
+  - component: {fileID: 5428744609598548194}
   m_Layer: 0
   m_Name: Bone
   m_TagString: Untagged
@@ -2956,13 +3020,13 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8561309165775978264}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 1
+  m_LinearDrag: 4
+  m_AngularDrag: 4
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -2985,6 +3049,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0.002701779, y: 0.005340552}
   m_Size: {x: 0.009457877, y: 0.014588567}
   m_Direction: 0
+--- !u!255 &5428744609598548194
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561309165775978264}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 2744131923287147476}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0.0000000029037943, y: -0.08103544}
+  m_DampingRatio: 0
+  m_Frequency: 0
 --- !u!1 &9192584800922207290
 GameObject:
   m_ObjectHideFlags: 0
