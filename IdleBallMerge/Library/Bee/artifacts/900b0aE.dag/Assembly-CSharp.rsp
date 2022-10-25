@@ -455,6 +455,7 @@
 "Assets/Scripts/CameraManager.cs"
 "Assets/Scripts/ClickerControl.cs"
 "Assets/Scripts/FreezePosition.cs"
+"Assets/Scripts/Point.cs"
 "Assets/Scripts/Rope.cs"
 "Assets/Scripts/TopBoundary.cs"
 "Assets/Scripts/Upgrade/MergeButton.cs"

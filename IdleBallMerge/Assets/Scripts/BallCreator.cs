@@ -15,7 +15,7 @@ public class BallCreator : Observer
     public GameObject ballParent;
     public bool withoutBallSpawn = false;
     float tempSpeed;
-
+    [SerializeField] GameObject coinPoint;
     private void Awake()
     {
         _instance = this;
@@ -58,17 +58,27 @@ public class BallCreator : Observer
         //newBall.GetComponent<Rigidbody2D>().mass = upgradeSettings._mass[Globals.ballLevel];
         newBall.GetComponent<Ball>().mass = upgradeSettings._mass[Globals.ballLevel];
         newBall.transform.localScale = Vector3.one * upgradeSettings._radius[Globals.ballLevel];
+        newBall.GetComponent<Ball>().trailRender.startWidth = 3 * upgradeSettings._radius[Globals.ballLevel];
         BallManager.Instance.ballList.Add(newBall.GetComponent<Ball>());
+        StartCoroutine(CoinDelay(newBall.transform, Globals.coinPerBall));
 
-    
-
-        totalMass += upgradeSettings._mass[Globals.ballLevel];
+     totalMass += upgradeSettings._mass[Globals.ballLevel];
 
         foreach(Rope rope in ropes)
         {
             rope.totalMass = totalMass * 1000;
             rope.MassUpdate();
         }
+    }
+    IEnumerator CoinDelay(Transform instPos, int _Coin)
+    {
+        yield return new WaitForSeconds(0.5f);
+        Coin(instPos, _Coin);
+    }
+    void Coin(Transform instPos, int Coin)
+    {
+        var point = Instantiate(coinPoint, instPos.position, Quaternion.identity);
+        point.GetComponent<Point>().PointText.text = "$" + Coin.ToString();
     }
     void ChangeSpeedCheck()
     {

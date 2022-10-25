@@ -7,9 +7,11 @@ public class Ball : MonoBehaviour
     public int ballLevel;
     public float radius;
     public float mass;
+   public TrailRenderer trailRender;
     private void Awake()
     {
         transform.localScale = new Vector2(radius, radius);
+        trailRender = GetComponent<TrailRenderer>();
         //GetComponent<Rigidbody2D>().mass = mass;
     }
     private void OnCollisionEnter2D(Collision2D collision)

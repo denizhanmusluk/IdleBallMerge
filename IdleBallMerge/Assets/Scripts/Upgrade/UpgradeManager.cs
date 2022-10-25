@@ -281,6 +281,8 @@ public class UpgradeManager : MonoBehaviour
         //newBall.GetComponent<Rigidbody2D>().mass = upgradeSettings._mass[targetLevel];
         newBall.GetComponent<Ball>().mass = upgradeSettings._mass[targetLevel];
         newBall.transform.localScale = Vector3.one * upgradeSettings._radius[targetLevel];
+        newBall.GetComponent<Ball>().trailRender.startWidth = 3 * upgradeSettings._radius[targetLevel];
+
         BallManager.Instance.ballList.Add(newBall.GetComponent<Ball>());
         DoGetValueScale(newBall.transform, true, oldRadius, upgradeSettings._radius[targetLevel], 0.5f, Ease.OutElastic);
     }
