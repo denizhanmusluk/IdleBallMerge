@@ -54,6 +54,7 @@ MonoBehaviour:
   rope1: {fileID: 304380245391099370}
   rope2: {fileID: 4687741076271070366}
   locked: {fileID: 4687741077024022998}
+  ropeSettings: {fileID: 11400000, guid: f90e1e8858c8b0c4aa68913d938ceaca, type: 2}
 --- !u!1 &1764466645604558284
 GameObject:
   m_ObjectHideFlags: 0

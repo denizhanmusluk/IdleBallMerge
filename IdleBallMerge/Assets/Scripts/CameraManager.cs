@@ -34,9 +34,9 @@ public class CameraManager : MonoBehaviour
         float counter = 0f;
         while(counter < 1f)
         {
-            counter += 0.5f * Time.deltaTime;
+            counter += 0.25f * Time.deltaTime;
             transform.position = Vector3.Lerp(oldCameraPos, newCameraPos, counter);
-            yield return new WaitForSeconds(0.005f);
+            yield return null;
         }
         transform.position = newCameraPos;
     }

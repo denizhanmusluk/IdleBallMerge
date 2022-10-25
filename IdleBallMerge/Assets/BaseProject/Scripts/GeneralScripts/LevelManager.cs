@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] List<GameObject> levels;
     //[SerializeField] public int LevelCount;
     public TextMeshProUGUI levelText;
+    [SerializeField] GameObject roof;
     private void Awake()
     {
         _instance = this;
@@ -68,7 +69,9 @@ public class LevelManager : MonoBehaviour
     }
     IEnumerator OldLevelClosed()
     {
-        yield return new WaitForSeconds(2f);
+        roof.SetActive(false);
+        yield return new WaitForSeconds(4f);
         oldLevel.SetActive(false);
+        roof.SetActive(true);
     }
 }

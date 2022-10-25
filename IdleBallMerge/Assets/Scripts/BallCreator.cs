@@ -60,26 +60,41 @@ public class BallCreator : Observer
         newBall.transform.localScale = Vector3.one * upgradeSettings._radius[Globals.ballLevel];
         newBall.GetComponent<Ball>().trailRender.startWidth = 3 * upgradeSettings._radius[Globals.ballLevel];
         BallManager.Instance.ballList.Add(newBall.GetComponent<Ball>());
-        StartCoroutine(CoinDelay(newBall.transform, Globals.coinPerBall));
+
+        newBall.GetComponent<Ball>()._coinPoint = coinPoint;
+        newBall.GetComponent<Ball>().coinValue = Globals.coinPerBall;
+        newBall.GetComponent<Ball>().firstCollisionDetection = true;
+
+        //StartCoroutine(CoinDelay(newBall.transform, Globals.coinPerBall));
 
      totalMass += upgradeSettings._mass[Globals.ballLevel];
 
-        foreach(Rope rope in ropes)
+        //foreach(Rope rope in ropes)
+        //{
+        //    rope.totalMass = totalMass * 1000;
+        //    rope.MassUpdate();
+        //}
+        VibratoManager.Instance.LightViration();
+
+    }
+    public void RopesMassUpdate()
+    {
+        foreach (Rope rope in ropes)
         {
             rope.totalMass = totalMass * 1000;
             rope.MassUpdate();
         }
     }
-    IEnumerator CoinDelay(Transform instPos, int _Coin)
-    {
-        yield return new WaitForSeconds(0.5f);
-        Coin(instPos, _Coin);
-    }
-    void Coin(Transform instPos, int Coin)
-    {
-        var point = Instantiate(coinPoint, instPos.position, Quaternion.identity);
-        point.GetComponent<Point>().PointText.text = "$" + Coin.ToString();
-    }
+    //IEnumerator CoinDelay(Transform instPos, int _Coin)
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+    //    Coin(instPos, _Coin);
+    //}
+    //void Coin(Transform instPos, int Coin)
+    //{
+    //    var point = Instantiate(coinPoint, instPos.position, Quaternion.identity);
+    //    point.GetComponent<Point>().PointText.text = "$" + Coin.ToString();
+    //}
     void ChangeSpeedCheck()
     {
         if (Globals.currentSpawnSpeed != tempSpeed)

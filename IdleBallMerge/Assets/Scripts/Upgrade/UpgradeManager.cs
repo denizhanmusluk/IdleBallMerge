@@ -166,6 +166,10 @@ public class UpgradeManager : MonoBehaviour
             Globals.nowMergeable = true;
         }
     }
+    void SingleBallCheck()
+    {
+
+    }
     public void MergeButton()
     {
         int searchLevel = 0;
@@ -193,7 +197,19 @@ public class UpgradeManager : MonoBehaviour
                         break;
                     }
                 }
-                if(secondBall != null && firstBall != null)
+                if (secondBall == null && firstBall != null)
+                {
+                    if(firstBall.ballLevel < Globals.ballLevel)
+                    {
+                        BallManager.Instance.destroyBallList.Add(firstBall);
+
+                        BallManager.Instance.ballList.Remove(firstBall);
+                        //BallCreator.Instance.totalMass -= firstBall.GetComponent<Ball>().mass;
+
+                        //Destroy(firstBall.gameObject);
+                    }
+                }
+                if (secondBall != null && firstBall != null)
                 {
                     if (Globals.moneyAmount >= upgradeSettings._mergeCost[level + 1])
                     {
@@ -274,6 +290,8 @@ public class UpgradeManager : MonoBehaviour
 
         Destroy(firstBall.gameObject);
         Destroy(secondBall.gameObject);
+        VibratoManager.Instance.MediumViration();
+
     }
     void MergeNewBall(int targetLevel, Vector3 newPos,float oldRadius)
     {

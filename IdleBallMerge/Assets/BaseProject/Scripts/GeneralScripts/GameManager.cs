@@ -104,7 +104,10 @@ public class GameManager : Observer
             MoneyUpdate(1000);
         }
     }
-
+    public void EarnMoney()
+    {
+        MoneyUpdate(10000000);
+    }
     //private void Update()
     //{
     //    if (Input.GetKeyDown(KeyCode.W))

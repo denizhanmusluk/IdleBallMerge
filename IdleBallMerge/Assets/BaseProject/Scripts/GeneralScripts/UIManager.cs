@@ -123,7 +123,10 @@ public class UIManager : Subject
 
     IEnumerator setVal(int amount, float oldAmount)
     {
-        DoGetValueScale(moneyIcon.transform, true, 0.75f, 1, 0.5f, Ease.OutElastic);
+        if (amount > 0)
+        {
+            DoGetValueScale(moneyIcon.transform, true, 0.75f, 1, 0.5f, Ease.OutElastic);
+        }
         float counter = 0f;
         while (counter < 1f)
         {
