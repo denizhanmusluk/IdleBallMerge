@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e92bf9df9e24d4fbdbcacef0ae72e5, type: 3}
   m_Name: Rope Settings
   m_EditorClassIdentifier: 
-  ropeMaxHealth: ee020000d0070000a00f0000401f0000803e0000007d000000fa000000f40100
+  ropeMaxHealth: ee020000d0070000a00f0000401f0000803e0000007d000000fa000000f4010000e8030000d0070000a00f0000401f00

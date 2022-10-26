@@ -37,8 +37,8 @@ public class GameManager : Observer
 
         //Application.targetFrameRate = 60;
         Globals.moneyAmount = PlayerPrefs.GetInt("money");
-        ui.inGameScoreText.text = Globals.moneyAmount.ToString();
-
+        //ui.inGameScoreText.text = Globals.moneyAmount.ToString();
+        ui.Factor(Globals.moneyAmount);
         ui.startCanvas.SetActive(true);
         ui.finishCanvas.SetActive(false);
         ui.failCanvas.SetActive(false);

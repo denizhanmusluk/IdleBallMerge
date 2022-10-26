@@ -132,32 +132,26 @@ public class UIManager : Subject
         {
             counter += 8 * Time.deltaTime;
             float money = Mathf.Lerp(oldAmount, (float)Globals.moneyAmount, counter);
-            if (Globals.moneyAmount < 1000)
-            {
-                inGameScoreText.text = ((int)money).ToString();
-            }
-            else if(Globals.moneyAmount < 1000000)
-            {
-                inGameScoreText.text = ((int)money / 1000).ToString() + "." + (((int)money / 100) % 10).ToString() + "k";
-            }
-            else
-            {
-                inGameScoreText.text = ((int)money / 1000000).ToString() + "." + (((int)money / 100000) % 10).ToString() + "m";
-            }
-            yield return null;
+            Factor((int)money);
+                 yield return null;
         }
+        Factor(Globals.moneyAmount);
+
+    }
+    public void Factor(int value)
+    {
         if (Globals.moneyAmount < 1000)
         {
-            inGameScoreText.text = ((int)Globals.moneyAmount).ToString();
+            inGameScoreText.text = (value).ToString();
         }
         else if (Globals.moneyAmount < 1000000)
 
         {
-            inGameScoreText.text = ((int)Globals.moneyAmount / 1000).ToString() + "." + (((int)Globals.moneyAmount / 100) % 10).ToString() + "k";
+            inGameScoreText.text = (value / 1000).ToString() + "." + ((value / 100) % 10).ToString() + "k";
         }
         else
         {
-            inGameScoreText.text = ((int)Globals.moneyAmount / 1000000).ToString() + "." + (((int)Globals.moneyAmount / 100000) % 10).ToString() + "m";
+            inGameScoreText.text = (value / 1000000).ToString() + "." + ((value / 100000) % 10).ToString() + "m";
 
         }
     }

@@ -15,10 +15,13 @@ public class Rope : MonoBehaviour
     [SerializeField] GameObject locked;
     [SerializeField] RopeSettings ropeSettings;
     bool startActive = true;
+    [SerializeField] float oscilPeriod;
+    [SerializeField] float oscilForce;
     private void Start()
     {
         Init();
         startActive = false;
+        StartCoroutine(Oscillation());
     }
     void OnEnable()
     {
@@ -138,5 +141,20 @@ public class Rope : MonoBehaviour
                 tr.localScale = Vector3.one * value;
             });
         return tween;
+    }
+    IEnumerator Oscillation()
+    {
+        while (true)
+        {
+            float counter = 0;
+            while (counter < oscilPeriod)
+            {
+                counter += Time.deltaTime;
+                rope1.GetComponent<Rigidbody2D>().AddForce(Vector2.up * oscilForce);
+                rope2.GetComponent<Rigidbody2D>().AddForce(Vector2.up * oscilForce);
+                yield return null;
+            }
+            yield return new WaitForSeconds(oscilPeriod);
+        }
     }
 }
