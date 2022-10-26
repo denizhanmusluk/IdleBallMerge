@@ -116,7 +116,7 @@ public class UIManager : Subject
         Globals.moneyAmount = Globals.moneyAmount + miktar;
         StartCoroutine(setVal(miktar, moneyOld));
 
-        PlayerPrefs.SetInt("money", Globals.moneyAmount);
+        PlayerPrefs.SetInt("money", (int)Globals.moneyAmount);
 
         UpgradeManager.Instance.isEnoughMoney();
     }
@@ -132,29 +132,31 @@ public class UIManager : Subject
         {
             counter += 8 * Time.deltaTime;
             float money = Mathf.Lerp(oldAmount, (float)Globals.moneyAmount, counter);
-            Factor((int)money);
-                 yield return null;
+            inGameScoreText.text = FactorCalculator.TextConverter((long)money, 1);
+            //Factor((int)money);
+            yield return null;
         }
-        Factor(Globals.moneyAmount);
+        //Factor(Globals.moneyAmount);
+        inGameScoreText.text = FactorCalculator.TextConverter((long)Globals.moneyAmount, 1);
 
     }
-    public void Factor(int value)
-    {
-        if (Globals.moneyAmount < 1000)
-        {
-            inGameScoreText.text = (value).ToString();
-        }
-        else if (Globals.moneyAmount < 1000000)
+    //public void Factor(int value)
+    //{
+    //    if (value < 1000)
+    //    {
+    //        inGameScoreText.text = (value).ToString();
+    //    }
+    //    else if (value < 1000000)
 
-        {
-            inGameScoreText.text = (value / 1000).ToString() + "." + ((value / 100) % 10).ToString() + "k";
-        }
-        else
-        {
-            inGameScoreText.text = (value / 1000000).ToString() + "." + ((value / 100000) % 10).ToString() + "m";
+    //    {
+    //        inGameScoreText.text = (value / 1000).ToString() + "." + ((value / 100) % 10).ToString() + "k";
+    //    }
+    //    else
+    //    {
+    //        inGameScoreText.text = (value / 1000000).ToString() + "." + ((value / 100000) % 10).ToString() + "m";
 
-        }
-    }
+    //    }
+    //}
     public Tween DoGetValueScale(Transform tr, bool active, float value, float lastValue, float duration, DG.Tweening.Ease type)
     {
         //Vector3 firstScale = tr.localScale;

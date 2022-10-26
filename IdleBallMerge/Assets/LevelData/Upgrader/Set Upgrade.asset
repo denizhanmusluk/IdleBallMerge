@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e4e4aeaf35cc949ab11f274d21dfc0, type: 3}
+  m_Name: Set Upgrade
+  m_EditorClassIdentifier: 
+  ballPrefab:
+  - {fileID: 3923242889525074646, guid: 0e57f43488ea0e045bdc180f88c269f7, type: 3}
+  - {fileID: 3923242889525074646, guid: 03650f6137f23ba419978c1e72fdef1f, type: 3}
+  - {fileID: 3923242889525074646, guid: 75840343d91c6924bb28eb4a701fb8ac, type: 3}
+  - {fileID: 3923242889525074646, guid: 2d9e798bfa64d0a4885f2d68eda08181, type: 3}
+  - {fileID: 3923242889525074646, guid: d2eea62a4c7c36d42b78598ddb0c8265, type: 3}
+  - {fileID: 3923242889525074646, guid: fb4982dbc2668c94b9706af7cde01dd8, type: 3}
+  - {fileID: 3923242889525074646, guid: 27fdb246a313c8743b7c991aaf158276, type: 3}
+  - {fileID: 3923242889525074646, guid: 9d8363f25bd901048a2a23ac3777bd89, type: 3}
+  - {fileID: 3923242889525074646, guid: 52378c962faac0049850654c20b12abc, type: 3}
+  - {fileID: 3923242889525074646, guid: fe834196f2ea7a6479f5dcb9804403f5, type: 3}
+  - {fileID: 3923242889525074646, guid: a77d8147d47b3804986fd445710fd68a, type: 3}
+  - {fileID: 3923242889525074646, guid: c81179bc42094fc46af577c8f7d87a8a, type: 3}
+  - {fileID: 3923242889525074646, guid: 42f0a5ba8cc1d284ba57db8914ce1551, type: 3}
+  - {fileID: 3923242889525074646, guid: 88ce8bf562ab6ad42be3506be9444100, type: 3}
+  - {fileID: 3923242889525074646, guid: 207a15991e6f44a4bbec0261dd9fda0f, type: 3}
+  - {fileID: 3923242889525074646, guid: c1015c1e7ddcad541a3dd4a5b6b5b033, type: 3}
+  - {fileID: 3923242889525074646, guid: 12e276cc1a1dcb542acbdabf8edaf405, type: 3}
+  - {fileID: 3923242889525074646, guid: 7335900aa9d5e2b4f98ff67358123449, type: 3}
+  - {fileID: 3923242889525074646, guid: 9e4a23a4f94edf74993947579f8ccc69, type: 3}
+  - {fileID: 3923242889525074646, guid: 85ad95a6530462f4bb9d0d72f8939974, type: 3}
+  - {fileID: 3923242889525074646, guid: 1c493a2049722a744abc0a095979c6b5, type: 3}
+  - {fileID: 3923242889525074646, guid: 993483fd352b0cf42843c188b52c903c, type: 3}
+  - {fileID: 3923242889525074646, guid: 57c6432f0b3a29b4586480e481630945, type: 3}
+  radius:
+  - 0.07
+  - 0.085
+  - 0.1
+  - 0.115
+  - 0.13
+  - 0.145
+  - 0.16
+  - 0.175
+  - 0.19
+  - 0.205
+  - 0.22
+  - 0.235
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  mass:
+  - 0.002
+  - 0.004
+  - 0.008
+  - 0.016
+  - 0.032
+  - 0.064
+  - 0.128
+  - 0.256
+  - 0.512
+  - 1.024
+  - 2.048
+  - 4.096
+  - 8.192
+  - 16
+  - 32
+  - 64
+  - 128
+  - 256
+  - 512
+  - 1024
+  - 2048
+  - 4096
+  - 8192
+  coinPerBallMultiple: 3
+  ballUpgradeCost: 
+  mergeCost: 
+  clickSpawnSpeed: []
+  clickSpeedUpgradeCost: 

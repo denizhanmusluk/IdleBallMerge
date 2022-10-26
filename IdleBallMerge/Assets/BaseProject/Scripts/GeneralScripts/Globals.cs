@@ -6,7 +6,7 @@ public static class Globals
 {
     public static int currentLevel = 1;
     public static int currentLevelIndex = 0, LevelCount;
-    public static int moneyAmount = 0;
+    public static long moneyAmount = 0;
 
     public static float currentSpawnSpeed = 0; // Upgradeable
 

@@ -85,18 +85,19 @@ public class UpgradeManager : MonoBehaviour
     {
         float totalCoin = ((float)Globals.coinPerBall * (float)Globals.currentSpawnSpeed);
         Debug.Log("totalCoin  " + totalCoin);
-        if (((int)totalCoin) < 1000)
-        {
-            brickMoneyText.text = "$" + ((int)totalCoin).ToString() + " / sec";
-        }
-        else if (((int)totalCoin) < 1000000)
-        {
-            brickMoneyText.text = "$" + (((int)totalCoin) / 1000).ToString() + "." + ((((int)totalCoin) / 100) % 10).ToString() + "k" + " / sec";
-        }
-        else
-        {
-            brickMoneyText.text = "$" + (((int)totalCoin) / 1000000).ToString() + "." + ((((int)totalCoin) / 100000) % 10).ToString() + "m" + " / sec";
-        }
+        brickMoneyText.text = "$" + FactorCalculator.TextConverter((long)totalCoin, 1) + " / sec";
+        //if (((int)totalCoin) < 1000)
+        //{
+        //    brickMoneyText.text = "$" + ((int)totalCoin).ToString() + " / sec";
+        //}
+        //else if (((int)totalCoin) < 1000000)
+        //{
+        //    brickMoneyText.text = "$" + (((int)totalCoin) / 1000).ToString() + "." + ((((int)totalCoin) / 100) % 10).ToString() + "k" + " / sec";
+        //}
+        //else
+        //{
+        //    brickMoneyText.text = "$" + (((int)totalCoin) / 1000000).ToString() + "." + ((((int)totalCoin) / 100000) % 10).ToString() + "m" + " / sec";
+        //}
     }
     public void BallUpgradeButton()
     {

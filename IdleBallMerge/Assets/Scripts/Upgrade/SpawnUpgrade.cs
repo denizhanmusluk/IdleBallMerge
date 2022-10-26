@@ -61,7 +61,7 @@ public class SpawnUpgrade : MonoBehaviour
 
 
 
-        costText.text = Factor(cost);
+        costText.text = FactorCalculator.TextConverter(cost, 2);
 
 
         //if (cost < 1000)
@@ -78,24 +78,24 @@ public class SpawnUpgrade : MonoBehaviour
         //}
 
     }
-    public string Factor(int value)
-    {
-        string txt;
-        if (value < 1000)
-        {
-            txt = (value).ToString();
-        }
-        else if (value < 1000000)
-        {
-            txt = (value / 1000).ToString() + "." + ((value / 100) % 10).ToString() + "k";
-        }
-        else
-        {
-            txt = (value / 1000000).ToString() + "." + ((value / 100000) % 10).ToString() + "m";
+    //public string Factor(int value)
+    //{
+    //    string txt;
+    //    if (value < 1000)
+    //    {
+    //        txt = (value).ToString();
+    //    }
+    //    else if (value < 1000000)
+    //    {
+    //        txt = (value / 1000).ToString() + "." + ((value / 100) % 10).ToString() + "k";
+    //    }
+    //    else
+    //    {
+    //        txt = (value / 1000000).ToString() + "." + ((value / 100000) % 10).ToString() + "m";
 
-        }
-        return txt;
-    }
+    //    }
+    //    return txt;
+    //}
     public void TextInitFull()
     {
         levelText1.text = "Max";

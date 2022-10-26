@@ -28,8 +28,6 @@ public class UpgradeSettings : ScriptableObject
 
     [Header("       MERGE BALL")]
 
-    [SerializeField] private int[] mergeBallLevel;
-    public int[] _mergeBallLevel { get { return mergeBallLevel; } }
 
     [SerializeField] private int[] mergeCost;
     public int[] _mergeCost { get { return mergeCost; } }
@@ -49,9 +47,4 @@ public class UpgradeSettings : ScriptableObject
 
     [SerializeField] private int[] clickSpeedUpgradeCost;
     public int[] _clickSpeedUpgradeCost { get { return clickSpeedUpgradeCost; } }
-
-    private void Awake()
-    {
-        
-    }
 }

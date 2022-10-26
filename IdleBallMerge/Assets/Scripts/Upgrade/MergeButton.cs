@@ -40,7 +40,7 @@ public class MergeButton : MonoBehaviour
         textAdd.text = "+";
         //costText.text = "$" + cost.ToString();
 
-
+        costText.text = FactorCalculator.TextConverter(cost, 2);
         if (cost < 1000)
         {
             costText.text = "$" + cost.ToString();
