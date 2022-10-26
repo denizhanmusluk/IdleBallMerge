@@ -126,6 +126,7 @@ public class Rope : MonoBehaviour
         }
         GameManager.Instance.ui.WinLevel();
         BallManager.Instance.DestroyListClear();
+        GameManager.Instance.MoneyUpdate(ropeSettings._coin[PlayerPrefs.GetInt("level")]);
     }
     void RopeHealthInit()
     {

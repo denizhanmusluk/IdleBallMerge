@@ -5804,6 +5804,8 @@ MonoBehaviour:
   - {fileID: 2016292815}
   levelText: {fileID: 5294679958401238156}
   roof: {fileID: 417598098}
+  clickPanel: {fileID: 5294679958580447409}
+  mergeButton: {fileID: 5294679958864486801}
 --- !u!4 &1168539576
 Transform:
   m_ObjectHideFlags: 0

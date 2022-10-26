@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 [System.Serializable]
 public class LevelManager : MonoBehaviour
@@ -19,6 +20,8 @@ public class LevelManager : MonoBehaviour
     //[SerializeField] public int LevelCount;
     public TextMeshProUGUI levelText;
     [SerializeField] GameObject roof;
+    [SerializeField] GameObject clickPanel;
+    [SerializeField] Button mergeButton;
     private void Awake()
     {
         _instance = this;
@@ -69,9 +72,12 @@ public class LevelManager : MonoBehaviour
     }
     IEnumerator OldLevelClosed()
     {
+        mergeButton.interactable = false;
         roof.SetActive(false);
+        clickPanel.SetActive(false);
         yield return new WaitForSeconds(4f);
         oldLevel.SetActive(false);
         roof.SetActive(true);
+        clickPanel.SetActive(true);
     }
 }

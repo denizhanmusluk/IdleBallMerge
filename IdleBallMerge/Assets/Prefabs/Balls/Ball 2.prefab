@@ -218,7 +218,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.02
+  m_Mass: 0.005
   m_LinearDrag: 1
   m_AngularDrag: 0
   m_GravityScale: 1
@@ -243,6 +243,9 @@ MonoBehaviour:
   radius: 0.2
   mass: 5
   trailRender: {fileID: 0}
+  _coinPoint: {fileID: 0}
+  coinValue: 0
+  firstCollisionDetection: 1
 --- !u!96 &8052329905208474832
 TrailRenderer:
   serializedVersion: 2
