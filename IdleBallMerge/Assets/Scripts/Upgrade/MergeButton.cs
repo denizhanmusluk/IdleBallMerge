@@ -8,8 +8,35 @@ public class MergeButton : MonoBehaviour
     [SerializeField] public TextMeshProUGUI costText;
     public void TextInit(int level, int cost)
     {
-        float ballNum = Mathf.Pow(2, (level));
-        levelText.text = ((int)ballNum).ToString() + "   " + ((int)ballNum).ToString();
+        float ballNum;
+        if (level <= 10)
+        {
+            ballNum = Mathf.Pow(2, (level));
+        }
+        else
+        {
+            ballNum = Mathf.Pow(2, (level - 9)) * 1000;
+
+        }
+        if (ballNum < 1000)
+        {
+            levelText.text = ((int)ballNum).ToString() + "   " + ((int)ballNum).ToString();
+        }
+        else if (ballNum < 1000000)
+        {
+            ballNum /= 1000;
+            //ballNum = Mathf.Round(ballNum);
+            levelText.text = ((int)ballNum).ToString() + "k" + "   " + ((int)ballNum).ToString() + "k";
+        }
+        else
+        {
+            ballNum /= 1000000;
+            //ballNum = Mathf.Round(ballNum);
+            levelText.text = ((int)ballNum).ToString() + "m" + "   " + ((int)ballNum).ToString() + "m";
+        }
+        //levelText.text = ((int)ballNum).ToString() + "   " + ((int)ballNum).ToString();
+
+
         textAdd.text = "+";
         //costText.text = "$" + cost.ToString();
 
