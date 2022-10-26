@@ -28,7 +28,7 @@ public class UpgradeButton : MonoBehaviour
     }
     public void TextInitFull()
     {
-        levelText.text = "Full";
+        levelText.text = "Max";
         costText.text = "";
     }
     public void TextInitNull()

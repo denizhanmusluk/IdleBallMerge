@@ -7704,7 +7704,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5294679959299720928}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10102,7 +10102,7 @@ GameObject:
   - component: {fileID: 1940033269}
   - component: {fileID: 1940033268}
   m_Layer: 5
-  m_Name: BrickUpImage (4)
+  m_Name: BallUpImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10119,14 +10119,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5294679957950406805}
   m_Father: {fileID: 5294679959299720928}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 97.8}
-  m_SizeDelta: {x: 94, y: 121.3}
+  m_AnchoredPosition: {x: 0, y: 73.63}
+  m_SizeDelta: {x: 166.7, y: 133.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1940033268
 MonoBehaviour:
@@ -10148,7 +10149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b66d0dd357ff76c4f915d17065c1e5e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3924130a540448645b12dbf29071920a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -13586,7 +13587,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2
+  m_text: 256k
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e755189f4073e9428881cb445add42d, type: 2}
   m_sharedMaterial: {fileID: 1340421909093535988, guid: 9e755189f4073e9428881cb445add42d, type: 2}
@@ -13613,8 +13614,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13662,17 +13663,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5294679957950406794}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5294679959299720928}
-  m_RootOrder: 3
+  m_Father: {fileID: 1940033267}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 21}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5294679957950406807
@@ -15664,7 +15665,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5294679959299720928}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16252,7 +16253,6 @@ RectTransform:
   - {fileID: 1940033267}
   - {fileID: 5294679958594258941}
   - {fileID: 5294679959599051181}
-  - {fileID: 5294679957950406805}
   - {fileID: 1483981731}
   - {fileID: 5294679958870265925}
   m_Father: {fileID: 5294679959560247359}
@@ -16392,6 +16392,7 @@ MonoBehaviour:
   levelText1: {fileID: 5294679957950406804}
   levelText2: {fileID: 1483981732}
   costText: {fileID: 5294679958870265924}
+  ballImage: {fileID: 1940033268}
 --- !u!1 &5294679959323934064
 GameObject:
   m_ObjectHideFlags: 0

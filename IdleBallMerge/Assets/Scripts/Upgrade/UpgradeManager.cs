@@ -49,7 +49,7 @@ public class UpgradeManager : MonoBehaviour
         ModelCreat();
         if (Globals.ballLevel < upgradeSettings._ballUpgradeCost.Length - 1)
         {
-            ballUpgradeButton.TextInit(Globals.ballLevel, upgradeSettings._ballUpgradeCost[Globals.ballLevel + 1]);
+            ballUpgradeButton.TextInit(Globals.ballLevel, upgradeSettings._ballUpgradeCost[Globals.ballLevel + 1], upgradeSettings._ballPrefab[Globals.ballLevel]);
         }
         else
         {

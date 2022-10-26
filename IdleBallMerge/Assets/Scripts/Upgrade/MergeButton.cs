@@ -30,7 +30,7 @@ public class MergeButton : MonoBehaviour
     }
     public void TextInitFull()
     {
-        levelText.text = "Full";
+        levelText.text = "Max";
         costText.text = "";
         textAdd.text = "";
     }

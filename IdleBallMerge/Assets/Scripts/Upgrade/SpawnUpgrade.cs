@@ -1,17 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 public class SpawnUpgrade : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI levelText1, levelText2;
     [SerializeField] public TextMeshProUGUI costText;
-    public void TextInit(int level, int cost)
+    [SerializeField] Image ballImage;
+    public void TextInit(int level, int cost, GameObject ball)
     {
-        float ballNum = Mathf.Pow(2, (level + 1));
+        float ballNum;
+        if (level < 10)
+        {
+            ballNum = Mathf.Pow(2, (level + 1));
+        }
+        else
+        {
+            ballNum = Mathf.Pow(2, (level - 9)) * 1000;
+
+        }
+
+        if (ballNum < 1000)
+        {
+            levelText1.text = ((int)ballNum).ToString();
+        }
+        else if (ballNum < 1000000)
+        {
+            ballNum /= 1000;
+            //ballNum = Mathf.Round(ballNum);
+            levelText1.text = ((int)ballNum).ToString() + "k";
+        }
+        else
+        {
+            ballNum /= 1000000;
+            //ballNum = Mathf.Round(ballNum);
+            levelText1.text = ((int)ballNum).ToString() + "m";
+        }
 
 
-        levelText1.text = ((int)ballNum).ToString();
+
+        string ballNumString = ((int)ballNum).ToString();
+
+        //levelText1.text = ballNumString;
+        if (ballNumString.Length > 2)
+        {
+            levelText1.fontSize = 50;
+        }
+        else
+        {
+            levelText1.fontSize = 70;
+        }
+        ballImage.color = ball.GetComponent<SpriteRenderer>().color;
+
 
 
         levelText2.text = "Lv. " + (level + 1).ToString();
@@ -19,23 +60,45 @@ public class SpawnUpgrade : MonoBehaviour
         //costText.text = "$" + cost.ToString();
 
 
-        if (cost < 1000)
+
+        costText.text = Factor(cost);
+
+
+        //if (cost < 1000)
+        //{
+        //    costText.text = "$" + cost.ToString();
+        //}
+        //else if (cost < 1000000)
+        //{
+        //    costText.text = "$" + (cost / 1000).ToString() + "." + ((cost / 100) % 10).ToString() + "k";
+        //}
+        //else
+        //{
+        //    costText.text = "$" + (cost / 1000000).ToString() + "." + ((cost / 100000) % 10).ToString() + "m";
+        //}
+
+    }
+    public string Factor(int value)
+    {
+        string txt;
+        if (value < 1000)
         {
-            costText.text = "$" + cost.ToString();
+            txt = (value).ToString();
         }
-        else if (cost < 1000000)
+        else if (value < 1000000)
         {
-            costText.text = "$" + (cost / 1000).ToString() + "." + ((cost / 100) % 10).ToString() + "k";
+            txt = (value / 1000).ToString() + "." + ((value / 100) % 10).ToString() + "k";
         }
         else
         {
-            costText.text = "$" + (cost / 1000000).ToString() + "." + ((cost / 100000) % 10).ToString() + "m";
-        }
+            txt = (value / 1000000).ToString() + "." + ((value / 100000) % 10).ToString() + "m";
 
+        }
+        return txt;
     }
     public void TextInitFull()
     {
-        levelText1.text = "Full";
+        levelText1.text = "Max";
         levelText2.text = "";
         costText.text = "";
     }
