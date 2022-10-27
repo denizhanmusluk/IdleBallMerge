@@ -325,6 +325,7 @@ public class UpgradeManager : MonoBehaviour
         if (Globals.ballLevel < upgradeSettings._ballUpgradeCost.Length - 1 && Globals.moneyAmount >= upgradeSettings._ballUpgradeCost[Globals.ballLevel + 1])
         {
             ballUpgradeButton.GetComponent<Button>().interactable = true;
+            TutorialManager.Instance.Tutorial_2_Open();
         }
         else
         {
@@ -345,6 +346,7 @@ public class UpgradeManager : MonoBehaviour
         if (Globals.clickSpeedLevel < upgradeSettings._clickSpeedUpgradeCost.Length - 1 && Globals.moneyAmount >= upgradeSettings._clickSpeedUpgradeCost[Globals.clickSpeedLevel + 1])
         {
             clickAnimUpgradeButton.GetComponent<Button>().interactable = true;
+            TutorialManager.Instance.Tutorial_1_Open();
         }
         else
         {

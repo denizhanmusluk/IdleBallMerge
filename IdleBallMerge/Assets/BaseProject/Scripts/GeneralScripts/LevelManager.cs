@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
+
 [System.Serializable]
 public class LevelManager : MonoBehaviour
 {
@@ -78,6 +80,19 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(4f);
         oldLevel.SetActive(false);
         roof.SetActive(true);
+        DoGetValuePos(roof.transform, true, 6, 4.33f, 1f, Ease.OutElastic);
+
         clickPanel.SetActive(true);
+    }
+
+    public Tween DoGetValuePos(Transform tr, bool active, float value, float lastValue, float duration, DG.Tweening.Ease type)
+    {
+        Vector3 firstPos = tr.localPosition;
+        Tween tween = DOTween.To
+            (() => value, x => value = x, lastValue, duration).SetEase(type).OnUpdate(delegate ()
+            {
+                tr.localPosition = new Vector3(firstPos.x, value, firstPos.z);
+            });
+        return tween;
     }
 }

@@ -6,7 +6,7 @@ public class UpgradeButton : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI levelText;
     [SerializeField] public TextMeshProUGUI costText;
-    public void TextInit(int level, int cost)
+    public void TextInit(int level, long cost)
     {
         levelText.text = "Lv. " + (1 + level).ToString();
         //costText.text = "$" + cost.ToString();

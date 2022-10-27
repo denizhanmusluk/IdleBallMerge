@@ -1,9 +1,9 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.DefaultCompany.IdleBallMerge"
+3    package="com.SkebStudios.IdleBallMerge"
 4    android:installLocation="preferExternal"
 5    android:versionCode="1"
-6    android:versionName="1.0" >
+6    android:versionName="0.1" >
 7
 8    <uses-sdk
 9        android:minSdkVersion="22"
@@ -85,7 +85,7 @@
 47-->[:unityLibrary] C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:37:13-44
 48            android:resizeableActivity="false"
 48-->[:unityLibrary] C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:13-47
-49            android:screenOrientation="fullUser"
+49            android:screenOrientation="portrait"
 49-->[:unityLibrary] C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:39:13-49
 50            android:theme="@style/UnityThemeSelector" >
 50-->[:unityLibrary] C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:40:13-54

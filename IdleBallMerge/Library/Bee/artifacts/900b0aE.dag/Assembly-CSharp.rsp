@@ -469,6 +469,9 @@
 "Assets/Scripts/Upgrade/UpgradeButton.cs"
 "Assets/Scripts/Upgrade/UpgradeManager.cs"
 "Assets/Scripts/Upgrade/UpgradeSettings.cs"
+"Assets/TutorialPrefab/TapTutorial.cs"
+"Assets/TutorialPrefab/tutorial.cs"
+"Assets/TutorialPrefab/TutorialManager.cs"
 -langversion:9.0
 
 /deterministic

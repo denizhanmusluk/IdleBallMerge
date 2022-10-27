@@ -110,7 +110,7 @@ public class UIManager : Subject
     //}
 
     // Money Update with Coroutine
-    public void MoneyUpdate(int miktar)
+    public void MoneyUpdate(long miktar)
     {
         float moneyOld = (float)Globals.moneyAmount;
         Globals.moneyAmount = Globals.moneyAmount + miktar;
@@ -121,7 +121,7 @@ public class UIManager : Subject
         UpgradeManager.Instance.isEnoughMoney();
     }
 
-    IEnumerator setVal(int amount, float oldAmount)
+    IEnumerator setVal(long amount, float oldAmount)
     {
         if (amount > 0)
         {

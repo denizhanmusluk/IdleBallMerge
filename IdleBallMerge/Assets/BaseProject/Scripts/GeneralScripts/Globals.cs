@@ -38,4 +38,6 @@ public static class Globals
     public static int currentMergeCost = 0;
     public static int currentMergeLevel = 0;
     public static bool nowMergeable = false;
+
+    public static bool StartActive = false;
 }

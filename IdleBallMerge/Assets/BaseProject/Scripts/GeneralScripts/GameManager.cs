@@ -128,6 +128,7 @@ public class GameManager : Observer
     //}
     public void StartState()
     {
+        Globals.StartActive = true;
     }
     public void FinalState()
     {
@@ -148,7 +149,7 @@ public class GameManager : Observer
         //ui.finishCanvas.SetActive(true);
         OnNextLevel();
     }
-    public void MoneyUpdate(int miktar)
+    public void MoneyUpdate(long miktar)
     {
         ui.MoneyUpdate(miktar);
     }

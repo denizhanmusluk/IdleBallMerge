@@ -9,7 +9,7 @@ INJECTED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono
 INJECTED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 	package
-		ADDED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:70-112
+		ADDED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:70-109
 		INJECTED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 		INJECTED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 	android:versionName
@@ -17,7 +17,7 @@ INJECTED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono
 		ADDED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 		INJECTED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:113-159
+		ADDED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:110-156
 	android:versionCode
 		INJECTED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 		ADDED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
@@ -25,7 +25,7 @@ INJECTED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono
 	xmlns:android
 		ADDED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:11-69
 	android:installLocation
-		ADDED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:160-200
+		ADDED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:157-197
 supports-screens
 ADDED from C:\GitHub\IdleBallMerge\IdleBallMerge\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:3:3-163
 	android:largeScreens

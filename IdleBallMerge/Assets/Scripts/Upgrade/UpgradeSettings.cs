@@ -45,6 +45,6 @@ public class UpgradeSettings : ScriptableObject
     [SerializeField] private float[] clickSpawnSpeed;
     public float[] _clickSpawnSpeed { get { return clickSpawnSpeed; } }
 
-    [SerializeField] private int[] clickSpeedUpgradeCost;
-    public int[] _clickSpeedUpgradeCost { get { return clickSpeedUpgradeCost; } }
+    [SerializeField] private long[] clickSpeedUpgradeCost;
+    public long[] _clickSpeedUpgradeCost { get { return clickSpeedUpgradeCost; } }
 }

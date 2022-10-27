@@ -1,4 +1,4 @@
-#Sun Oct 23 12:52:36 EET 2022
+#Thu Oct 27 00:47:18 EET 2022
 base.0=C\:\\GitHub\\IdleBallMerge\\IdleBallMerge\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

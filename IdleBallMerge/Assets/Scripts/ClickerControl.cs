@@ -58,6 +58,7 @@ public class ClickerControl : Observer
     }
     void StartState()
     {
+        TutorialManager.Instance.TapPlayOpen();
     }
 
     void WinState()
@@ -70,6 +71,7 @@ public class ClickerControl : Observer
     public void ClickButton()
     {
         StartCoroutine(Accelerator());
+        TutorialManager.Instance.TapPlayClose();
     }
     IEnumerator Accelerator()
     {

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.unity3d.player"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="0.1" >
 
     <uses-sdk
         android:minSdkVersion="22"
@@ -36,7 +36,7 @@
             android:hardwareAccelerated="false"
             android:launchMode="singleTask"
             android:resizeableActivity="false"
-            android:screenOrientation="fullUser"
+            android:screenOrientation="portrait"
             android:theme="@style/UnityThemeSelector" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
