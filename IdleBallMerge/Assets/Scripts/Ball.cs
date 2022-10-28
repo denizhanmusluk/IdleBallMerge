@@ -54,6 +54,6 @@ public class Ball : MonoBehaviour
     void Coin(Transform instPos, int Coin)
     {
         var point = Instantiate(_coinPoint, instPos.position, Quaternion.identity);
-        point.GetComponent<Point>().PointText.text = "$" + Coin.ToString();
+        point.GetComponent<Point>().PointText.text ="$" + FactorCalculator.TextConverter(Coin, 2);
     }
 }
