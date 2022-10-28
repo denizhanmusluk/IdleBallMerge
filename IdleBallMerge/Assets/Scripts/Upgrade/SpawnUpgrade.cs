@@ -10,6 +10,7 @@ public class SpawnUpgrade : MonoBehaviour
     [SerializeField] Image ballImage;
     public void TextInit(int level, int cost, GameObject ball)
     {
+    
         float ballNum;
         if (level < 10)
         {

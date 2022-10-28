@@ -49,7 +49,7 @@ public class UpgradeManager : MonoBehaviour
         ModelCreat();
         if (Globals.ballLevel < upgradeSettings._ballUpgradeCost.Length - 1)
         {
-            ballUpgradeButton.TextInit(Globals.ballLevel, upgradeSettings._ballUpgradeCost[Globals.ballLevel + 1], upgradeSettings._ballPrefab[Globals.ballLevel]);
+            ballUpgradeButton.TextInit(Globals.ballLevel + 1, upgradeSettings._ballUpgradeCost[Globals.ballLevel + 1], upgradeSettings._ballPrefab[Globals.ballLevel + 1]);
         }
         else
         {
@@ -170,6 +170,20 @@ public class UpgradeManager : MonoBehaviour
     void SingleBallCheck()
     {
 
+    }
+    public void mButton()
+    {
+        StartCoroutine(Mer());
+    }
+    IEnumerator Mer()
+    {
+        float counter = 0f;
+        while(counter < 10)
+        {
+            counter += Time.deltaTime;
+            MergeButton();
+            yield return null;
+        }
     }
     public void MergeButton()
     {

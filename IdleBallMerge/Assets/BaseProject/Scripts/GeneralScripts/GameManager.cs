@@ -102,8 +102,20 @@ public class GameManager : Observer
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            MoneyUpdate(50000000);
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
             MoneyUpdate(1000);
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.SetInt("money", 0);
+            PlayerPrefs.SetInt("ballLevel",0);
+            PlayerPrefs.SetInt("StaminaUpgradeLevel",0);
+            PlayerPrefs.SetInt("clickSpeedLevel",0);
+        }
+
     }
     public void EarnMoney()
     {
