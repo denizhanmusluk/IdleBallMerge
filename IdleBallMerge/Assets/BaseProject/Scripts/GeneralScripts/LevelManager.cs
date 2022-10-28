@@ -77,10 +77,16 @@ public class LevelManager : MonoBehaviour
         mergeButton.interactable = false;
         roof.SetActive(false);
         clickPanel.SetActive(false);
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
+       foreach( PolygonCollider2D plgn in oldLevel.GetComponentsInChildren<PolygonCollider2D>())
+        {
+            plgn.gameObject.SetActive(false);
+        }
+        yield return new WaitForSeconds(2f);
         oldLevel.SetActive(false);
+        yield return new WaitForSeconds(2f);
         roof.SetActive(true);
-        DoGetValuePos(roof.transform, true, 6, 4.33f, 1f, Ease.OutElastic);
+        DoGetValuePos(roof.transform, true, 5, 4.33f, 2f, Ease.OutElastic);
 
         clickPanel.SetActive(true);
     }
